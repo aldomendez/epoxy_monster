@@ -63,7 +63,7 @@ dar de alta y llenar los campos correspondientes</p>
   <div class="content">Geringa activa</div>
   <!-- <div class="sub header">Solo puede haber una geringa activa</div> -->
 </h2>
-<p class="ui segment">Solamente puede haber una geringa activa, puedes borrar la geringa 
+<p class="ui segment">La geringa activa expira <b>{{timeToExpire(epoxys[newSyringe.type].expiration)}}</b>, pero puedes borrar la geringa 
 <b>{{epoxys[newSyringe.type].LOT_NUMBER}}</b> y registrar una nueva</p>
 <div class="positive ui button" on-click="returnToStart"><b>Regresar</b> y dejar la jeringa que esta activa</div>
 <div class="negative ui button" on-click="askForComment"><b>Tirar</b> la geringa activa y registrar una nueva</div>

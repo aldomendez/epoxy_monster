@@ -1,6 +1,8 @@
 (function() {
   var development, epoxy, log, r;
 
+  moment.locale('es');
+
   r = new Ractive({
     el: 'container',
     template: '#template',
@@ -16,6 +18,9 @@
         operator: '',
         expiration: '',
         disposeComment: ''
+      },
+      timeToExpire: function(time) {
+        return moment(time).fromNow();
       }
     }
   });

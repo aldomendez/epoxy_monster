@@ -1,4 +1,5 @@
 
+moment.locale('es')
 r = new Ractive
   el: 'container'
   template:'#template'
@@ -15,6 +16,8 @@ r = new Ractive
       expiration:''
       disposeComment:''
     }
+    timeToExpire: (time)->
+      moment(time).fromNow()
   }
 development = true
 log = (message)->

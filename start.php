@@ -21,7 +21,7 @@
   <script src="../jsLib/SemanticUi/1.11.6/components/popup.min.js"></script>
   <script src="../jsLib/underscore/1.6.0/underscore.js"></script>
   <script src="../jsLib/ractivejs/0.7.1/ractive.js"></script>
-  <script src="../jsLib/moment/2.9.0/moment.min.js"></script>
+  <script src="../jsLib/moment/2.9.0/moment-with-locale-es.min.js"></script>
   <script src="../jsLib/fuse.js/fuse.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 </body>
