@@ -38,7 +38,7 @@ $queryEpoxyInsert = <<<QUERY1
 INSERT INTO epoxy 
 (lot_number, epoxy_pot_life, expire_date, last_upd_date,COMMENTS)
 Values
-(':type/:lot/:num',':pot_life',SYSDATE+1 ,SYSDATE,':num')
+(':type/:lot/:num',':pot_life',SYSDATE + :timeAlive ,SYSDATE,':num')
 QUERY1;
 // Query que inserta en apogee
 $queryInsertEpoxyLog = <<<QUERY2
@@ -57,6 +57,7 @@ QUERY2;
     $epoxy['num'] = substr(str_pad($DB->results[0]['QTY'] + 1,10,'0',STR_PAD_LEFT), -3);
     $DB->setQuery($queryEpoxyInsert);
     $DB->bind_vars(':type',$epoxy['type']);
+    $DB->bind_vars(':timeAlive',$epoxy['timeAlive']);
     $DB->bind_vars(':lot',$epoxy['lot']);
     $DB->bind_vars(':num',$epoxy['num']);
     $DB->bind_vars(':pot_life',$epoxy['pot_life']);
